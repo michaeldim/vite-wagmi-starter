@@ -53,10 +53,6 @@
     "vite-plugin-imp": "^2.3.0",
     "vite-plugin-pages": "^0.27.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fisand/vite-wagmi-seed.git"
-  },
   "keywords": [
     "vite",
     "wagmi",
@@ -64,8 +60,5 @@
   ],
   "author": "zouhang",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fisand/vite-wagmi-seed/issues"
-  },
   "homepage": "https://github.com/fisand/vite-wagmi-seed#readme"
 }
