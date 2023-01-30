@@ -5,7 +5,6 @@ import { useAccount, useBalance } from 'wagmi'
 
 import { NetworkSwitcher } from '@/components/SwitchNetworks'
 import { WalletModal } from '@/components/WalletModal'
-import { useWagmi } from '@/hooks'
 
 const Home = () => {
   const navigator = useNavigate()
@@ -49,30 +48,14 @@ const Home = () => {
         <NetworkSwitcher />
       </div>
       <p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-        {' | '}
-        <a className="App-link" href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener noreferrer">
-          Vite Docs
-        </a>
-        {' | '}
         <a onClick={() => navigator('/about')}>About</a>
+        {' | '}
+        <a onClick={() => navigator('/geist')}>Geist</a>
       </p>
-      <p>
-        {['', '', '', ''].map((_, index) => (
-          <Item key={index} />
-        ))}
-      </p>
+
       <WalletModal open={show} onCancel={onCancel} />
     </div>
   )
 }
 
 export default Home
-
-function Item() {
-  const { status } = useWagmi()
-
-  return <span></span>
-}

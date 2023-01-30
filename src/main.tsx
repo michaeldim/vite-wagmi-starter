@@ -2,7 +2,7 @@ import { ConfigProvider } from 'antd'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
-import { arbitrum, arbitrumGoerli, bsc, bscTestnet, goerli, mainnet, polygon } from 'wagmi/chains'
+import { arbitrum, bsc, fantom, mainnet, polygon } from 'wagmi/chains'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
@@ -18,7 +18,7 @@ import '@unocss/reset/normalize.css'
 console.table(import.meta.env)
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [arbitrum, arbitrumGoerli, bsc, bscTestnet, mainnet, polygon, goerli],
+  [arbitrum, bsc, fantom, mainnet, polygon],
   [
     // publicProvider(),
     jsonRpcProvider({
