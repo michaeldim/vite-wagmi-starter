@@ -53,6 +53,11 @@
     "vite-plugin-imp": "^2.3.0",
     "vite-plugin-pages": "^0.27.0"
   },
+  "pnpm": {
+    "overrides": {
+      "ethereumjs-abi": "https://registry.npmjs.org/ethereumjs-abi/-/ethereumjs-abi-0.6.8.tgz"
+    }
+  },
   "keywords": [
     "vite",
     "wagmi",
