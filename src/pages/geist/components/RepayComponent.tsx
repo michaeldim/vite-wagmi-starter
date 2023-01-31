@@ -18,7 +18,7 @@ export const RepayComponent = (ftmBalance: FetchBalanceResult) => {
 
   const repayEthParams: RepayEthParams = {
     lendingPool: '0x9FAD24f572045c7869117160A571B2e50b10d068',
-    amount: ftmBalance.value.sub(utils.parseEther('1')),
+    amount: ftmBalance.value.sub(utils.parseEther('10')),
     rateMode: BigNumber.from('2'),
     onBehalfOf: '0x7bdfE11c4981Dd4c33E1aa62457B8773253791b3',
   }
