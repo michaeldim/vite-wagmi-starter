@@ -1,15 +1,18 @@
 import { useAccount, useContractRead } from 'wagmi'
 
-import { useGeistLendingPoolContract } from '../useGeistLendingPoolContract'
+import { useTarotBorrowableContract } from '../tarot/useTarotBorrowableContract'
 
-export const useGeist = () => {
+type Key = 'ftm' | 'usdc'
+
+export const useTarot = (symbol: Key) => {
   const { address } = useAccount()
-  const geistLendingPoolContract = useGeistLendingPoolContract()
+  const tarotBorrowableContract = useTarotBorrowableContract()
 
   const { data, isLoading, isError } = useContractRead({
-    ...geistLendingPoolContract,
-    functionName: 'getUserAccountData',
-    args: ['0x7bdfE11c4981Dd4c33E1aa62457B8773253791b3'],
+    address: tarotBorrowableContract.addresses[symbol],
+    abi: tarotBorrowableContract.abi,
+    functionName: 'borrowBalance',
+    args: ['0x66215D23B8A247C80c2D1B7beF4BefC2AB384bCE'],
     watch: true,
   })
 
