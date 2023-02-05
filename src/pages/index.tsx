@@ -51,6 +51,8 @@ const Home = () => {
         <a onClick={() => navigator('/about')}>About</a>
         {' | '}
         <a onClick={() => navigator('/geist')}>Geist</a>
+        {' | '}
+        <a onClick={() => navigator('/tarot')}>Tarot</a>
       </p>
 
       <WalletModal open={show} onCancel={onCancel} />
