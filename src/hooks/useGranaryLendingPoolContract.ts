@@ -435,8 +435,8 @@ const abi = [
   },
 ] as const
 
-export const useGeistLendingPoolContract = () => {
-  const address = useGeistWagmiContractAddress()
+export const useGranaryLendingPoolContract = () => {
+  const address = useGranaryWagmiContractAddress()
 
   return useMemo(
     () => ({
@@ -447,13 +447,13 @@ export const useGeistLendingPoolContract = () => {
   )
 }
 
-export const useGeistWagmiContractAddress = () => {
+export const useGranaryWagmiContractAddress = () => {
   const { chain = fantom } = useNetwork()
 
   return useMemo(
     () =>
       ({
-        [fantom.id]: '0x9FAD24f572045c7869117160A571B2e50b10d068',
+        [fantom.id]: '0x7220FFD5Dc173BA3717E47033a01d870f06E5284',
       }[chain.id]),
     [chain]
   )

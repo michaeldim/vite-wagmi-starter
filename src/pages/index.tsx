@@ -52,6 +52,8 @@ const Home = () => {
         {' | '}
         <a onClick={() => navigator('/geist')}>Geist</a>
         {' | '}
+        <a onClick={() => navigator('/granary')}>Granary</a>
+        {' | '}
         <a onClick={() => navigator('/tarot')}>Tarot</a>
       </p>
 

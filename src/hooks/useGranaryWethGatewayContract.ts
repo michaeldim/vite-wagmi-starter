@@ -116,8 +116,8 @@ const abi = [
   { stateMutability: 'payable', type: 'receive' },
 ] as const
 
-export const useWethGatewayContract = () => {
-  const address = useWethGatewayContractAddress()
+export const useGranaryWethGatewayContract = () => {
+  const address = useGranaryWethGatewayContractAddress()
 
   return useMemo(
     () => ({
@@ -128,13 +128,13 @@ export const useWethGatewayContract = () => {
   )
 }
 
-export const useWethGatewayContractAddress = () => {
+export const useGranaryWethGatewayContractAddress = () => {
   const { chain = fantom } = useNetwork()
 
   return useMemo(
     () =>
       ({
-        [fantom.id]: '0x47102245FEa0F8D35a6b28E54505e9FfD83d0704',
+        [fantom.id]: '0x791f1E2Ba36f99af085DF47EdD62ec9d9b8aaD23',
       }[chain.id]),
     [chain]
   )
